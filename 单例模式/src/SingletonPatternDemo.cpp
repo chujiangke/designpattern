@@ -6,10 +6,7 @@ using namespace std;
 class singleton
 {
 protected:
-    singleton()
-    {
-        pthread_mutex_init(&mutex, NULL);
-    }
+    
 private:
     static singleton* p;
 public:
@@ -17,7 +14,7 @@ public:
     static singleton* initance();
 };
 
-pthread_mutex_t singleton::mutex;
+pthread_mutex_t singleton::mutex = PTHREAD_MUTEX_INITIALIZER;
 singleton* singleton::p = NULL;
 singleton* singleton::initance()
 {
