@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="include">
+        <in>bottle.h</in>
+        <in>burger.h</in>
+        <in>chickenburger.h</in>
+        <in>coke.h</in>
+        <in>colddrink.h</in>
+        <in>item.h</in>
+        <in>meal.h</in>
+        <in>mealbuilder.h</in>
+        <in>packing.h</in>
+        <in>pepsi.h</in>
+        <in>sys_logger.h</in>
+        <in>vegburger.h</in>
+        <in>wrapper.h</in>
+      </df>
+      <df name="src">
+        <in>BuilderPatternDemo.cpp</in>
+        <in>sys_logger.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="重要文件"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>smart</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>include</pElem>
+              <pElem>.</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>DEBUG=1</Elem>
+              <Elem>_LINUX_</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="include/bottle.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/burger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/chickenburger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/coke.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/colddrink.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/item.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/meal.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/mealbuilder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/packing.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/pepsi.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/sys_logger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/vegburger.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/wrapper.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/BuilderPatternDemo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/sys_logger.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
