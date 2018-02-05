@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+#include "advancedmediaplayer.h"
+#include "mediaplayer.h"
+using namespace std;
+class MediaAdapter : public MediaPlayer
+{
+private:
+  AdvancedMediaPlayer *advancedMediaPlayer;
+public:
+  MediaAdapter(string autoType)
+  {
+    if(autoType == "vlc")
+      {
+	advancedmediaplayer = new VlcPlayer();
+      }
+    else if( autoType = "mp4")
+      {
+	advancedmediaplayer = new Mp4Player();
+      }
+  }
+  void play(string audiotype, string filename)
+  {
+    if(autoType == "vlc")
+      {
+	advancedmediaplayer->playVlc(filename);
+      }
+    else if(autoType == "mp4")
+      {
+	advancedmediaplayer->playMp4(filename);
+      }
+  }
+}

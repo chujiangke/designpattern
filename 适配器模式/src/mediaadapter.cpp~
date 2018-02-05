@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+#include "advancedmediaplayer.h"
+#include "mediaplayer.h"
+using namespace std;
+class MediaAdapter : public MediaPlayer
+{
+private:
+  AdvancedMediaPlayer advancedMediaPlayer
+  }
+}
