@@ -2,7 +2,7 @@
 #define GREENCIRCLE_H
 #include <string>
 #include "drawapi.h"
-class GreenCircle : pubic DrawAPI
+class GreenCircle : public DrawAPI
 {
  public:
   void drawCircle(int radius, int x, int y)
