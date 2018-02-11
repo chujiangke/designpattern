@@ -40,8 +40,14 @@ public:
 		list<Person>* otherCriteriaItems  = otherCriteria->meetCriteria(persons_list_total);
 		for(list<Person>::iterator it_first = firstCriteriaItems->begin(); it_first != it_first->end(); it_first ++)
 		{
-			
+			list<Person>:: iterator it_other = otherCriteria->begin();
+			it_other = find_if(otherCriteria->begin(),otherCriteria->end(),FunFindIf(*it_first));
+			if (it_other == otherCriteria->end())
+			{
+				firstCriteriaItems->push_back(*it_first);
+			}
 		}
+		return firstCriteriaItems;
 	}
 
 private:
