@@ -1,5 +1,7 @@
-#include "cake.h"
+#ifndef DECRATOR_H
+#define DECRATOR_H
 
+#include "cake.h"
 class CakeDecrator :public Cake
 {
 protected:
@@ -38,3 +40,5 @@ public:
 	};
 	virtual ~CakeDecratorCholate(){};
 };
+
+#endif
