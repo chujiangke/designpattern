@@ -17,10 +17,11 @@ int main()
 {
   string colors[] = { "Red", "Green", "Blue", "White", "Black" };
   int colors_size =  TABLESIZE(colors);
+  ShapeFactory shapeFactory;
   for(int i = 0; i<20; i++)
     {
       string choice_color = colors[getRandomValue(colors_size)];
-      Circle* circle = (Circle*) ShapeFactory::getCircle(choice_color);
+      Circle* circle = (Circle*) shapeFactory.getCircle(choice_color);
       circle->setX(getRandomValue(MAX));
       circle->setY(getRandomValue(MAX));
       circle->draw();

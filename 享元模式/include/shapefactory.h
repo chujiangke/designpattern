@@ -10,24 +10,26 @@ using namespace std;
 class ShapeFactory
 {
  private:
-  static map<string, Shape*>circleMap;
+    map<string, Shape*>mymap;
  public:
-  static Shape* getCircle(string color)
+    Shape* getCircle(string color)
   {
-    map<string, Shape*>::iterator iter;
-    iter = circleMap.find(color);
-    if(iter == circleMap.end())
-      {
-	Circle *circle = new Circle(color);
-	circleMap.insert(make_pair(color, circle));
-	return circle;
-      }
+  
+    map<string,Shape*>::iterator it;
+    it = mymap.find(color);
+    if (it == mymap.end())
+       {
+	 Circle * circle = new Circle(color);
+	 mymap.insert(make_pair(color, circle));
+	 return circle;
+       }
     else
       {
-	Shape* shape = (Shape*)( iter->second );
-	return shape;
+	return it->second;
       }
+     return NULL;
   }
+
 };
 
 #endif
