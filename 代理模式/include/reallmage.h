@@ -1,0 +1,34 @@
+#ifndef REALIMAGE_H
+#define REALIMAGE_H
+#include <string>
+#include <iostream>
+#include "image.h"
+
+using namespace std;
+
+class RealImage:public Image
+{
+ private:
+  string fileName;
+
+  void loadFromDisk(string fileName)
+  {
+    cout<<"loadFromDisk"<<endl;
+    cout<<"fileName:"<<fileName<<endl;
+  }
+  
+ public:
+  RealImage(string fileName)
+    {
+      this->fileName = fileName;
+      loadFromDisk(fileName);
+    }
+  
+  virtual void display()
+  {
+    cout << "Display:"<<fileName<<endl;
+  }
+  
+};
+
+#endif
