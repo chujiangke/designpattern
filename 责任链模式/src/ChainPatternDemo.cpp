@@ -15,7 +15,7 @@ int main()
   fileLogger->setNextLogger(consoleLogger);
 
   errorLogger->logMessage(AbstractLogger::INFO, "This is an information.");
-  // errorLogger->logMessage(AbstractLogger::DEBUG,"This is an debug level information."); 
-  // errorLogger->logMessage(AbstractLogger::ERROR,"This is an error information."); 
+  errorLogger->logMessage(AbstractLogger::DEBUG,"This is an debug level information."); 
+  errorLogger->logMessage(AbstractLogger::ERROR,"This is an error information."); 
   return 0;
 }
