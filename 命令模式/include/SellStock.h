@@ -5,6 +5,7 @@
 #include <string>
 #include "Order.h"
 #include "Stock.h"
+using namespace std;
 class SellStock:public Order
 {
  private:
@@ -16,6 +17,7 @@ class SellStock:public Order
     }
   virtual void  execute()
   {
+    cout<<"SellStock execute"<<endl;
     stock->sell();
   }
 };

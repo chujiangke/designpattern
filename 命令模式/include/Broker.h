@@ -10,19 +10,19 @@ using namespace std;
 class Broker
 {
  private:
-  list<Order> listOrder;
+  list<Order*> listOrder;
  public:
-  void takeOrder(Order order)
+  void takeOrder(Order* order)
   {
     listOrder.push_back(order);
   }
   void placeOrders()
   {
-    list<Order>::iterator it;
+    list<Order*>::iterator it;
     for(it=listOrder.begin(); it!=listOrder.end();it++)
       {
-	cout<<"for loop"<<endl;
-	it->execute();
+	/* cout<<"for loop"<<endl; */
+	(*it)->execute();
       }
   }
     

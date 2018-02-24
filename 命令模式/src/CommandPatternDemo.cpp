@@ -9,12 +9,12 @@ int main()
   SellStock sellStock(&stock);
 
   Broker broker;
-  broker.takeOrder(buyStock);
-  broker.takeOrder(sellStock);
-  broker.takeOrder(buyStock);
-  broker.takeOrder(sellStock);
-  broker.takeOrder(buyStock);
-  broker.takeOrder(sellStock);
+  broker.takeOrder(&buyStock);
+  broker.takeOrder(&sellStock);
+  broker.takeOrder(&buyStock);
+  broker.takeOrder(&sellStock);
+  broker.takeOrder(&buyStock);
+  broker.takeOrder(&sellStock);
 
   broker.placeOrders();
   
