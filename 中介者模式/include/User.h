@@ -4,7 +4,6 @@
 #include <string>
 #include "ChatRoom.h"
 using namespace std;
-class ChatRoom;
 class User
 {
  private:
