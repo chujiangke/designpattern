@@ -7,6 +7,6 @@ class Context;
 class State
 {
  public:
-  void doAction(Context Context) = 0;
+  virtual void doAction(Context* context) = 0;
 };
 #endif

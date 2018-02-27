@@ -8,14 +8,14 @@ class Context;
 class StopState:public State
 {
  public:
-  void doAction(Context* content)
+  void doAction(Context* context)
   {
     cout<<"Player is in stop state"<<endl;
     context->setState(this);
   }
   string getState()
   {
-    reutnr string("stop state");
+    return string("stop state");
   }
-}
+};
 #endif

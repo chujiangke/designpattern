@@ -6,13 +6,13 @@
 using namespace std;
 int main()
 {
-  Context* context = Context();
+  Context* context = new Context();
   State* startState = new StartState();
   startState->doAction(context);
-  cout<<context->getState()->getState();
-
+  cout<<dynamic_cast<StartState*>(context->getState())->getState();
   State* stopState = new StopState();
-  stopState->doAction(stopState);
-  cout<<stopState->getState()->getState();
+  stopState->doAction(context);
+  cout<<dynamic_cast<StopState*>(context->getState())->getState();
+  
   return 0;
 }

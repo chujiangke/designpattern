@@ -8,7 +8,7 @@ class Context;
 class StartState:public State
 {
  public:
-  void doAction(Context* content)
+  void doAction(Context* context)
   {
     cout<<"Player is in start state"<<endl;
     context->setState(this);
@@ -17,5 +17,5 @@ class StartState:public State
   {
     return string("start state");
   }
-}
+};
 #endif
