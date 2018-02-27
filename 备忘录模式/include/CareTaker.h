@@ -9,17 +9,17 @@ using namespace std;
 class CareTaker
 {
  private:
-  vector<Memento*> mementoList;
+  vector<Memento*> mementoVector;
  public:
   void add(Memento* memento)
   {
-    mementoList.pushback(memento);
+    mementoVector.push_back(memento);
   }
-  memento* get(int index)
+  Memento* get(int index)
   {
-    if(index<=0 || index > mementoList.size())
+    if(index<=0 || index > mementoVector.size())
       return NULL;
-    return memento[index];
+    return mementoVector[index];
   }
 };
 #endif

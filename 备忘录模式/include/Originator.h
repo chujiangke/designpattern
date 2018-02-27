@@ -15,7 +15,7 @@ class Originator
   {
     this->state = state;
   }
-  string getState(string state)
+  string getState()
   {
     return state;
   }
@@ -23,9 +23,12 @@ class Originator
   {
     return new Memento(state);
   }
-  void getStateFromMemento(Memento& memento)
+  void getStateFromMemento(Memento* memento)
   {
-    state = memento.getState();
+    if(memento != NULL)
+      {
+	 state = memento->getState();
+      }
   }
 };
 
