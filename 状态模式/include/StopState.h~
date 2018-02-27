@@ -1,0 +1,16 @@
+#ifndef STOPSTATE_H
+#define STOPSTATE_H
+#include <iostream>
+#include <string>
+#include "State.h"
+using namespace std;
+class StartState:public State
+{
+ public:
+  void doAction(Context* content)
+  {
+    cout<<"Player is in start state"<<endl;
+    context->setState(this);
+  }
+}
+#endif

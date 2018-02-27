@@ -1,0 +1,12 @@
+#ifndef STATE_H
+#define STATE_H
+#include <iostream>
+#include <string>
+#include "Context.h"
+class Context;
+class State
+{
+ public:
+  void doAction(Context Context) = 0;
+};
+#endif
