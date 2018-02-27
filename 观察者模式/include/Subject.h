@@ -3,13 +3,39 @@
 
 #include <iostream>
 #include <string>
+#include <list>
+#include "Observer.h"
 using namespace std;
 class Subject
 {
  public:
-  virtual void attach(Observer *) = 0;
-  virtual void deatch(Observer *) = 0;
-  virtual void notifyAllObservers() = 0;
+  void attach(Observer *osberver)
+  {
+    observers.push_back(osberver);
+  }
+  void deatch(Observer * osberver)
+  {
+    observers.remove(osberver);
+  }
+  void notifyAllObservers()
+  {
+    list<Observer*>::iterator it;
+    for(it = observers.begin(); it!= observers.end(); it++)
+      {
+	(*it)->update(state);
+      }
+  }
+  int getState()
+  {
+    return state;
+  }
+  void setState(const int state)
+  {
+    this->state = state;
+  }
+ private:
+  int state;
+  list<Observer*> observers;
 };
 
 #endif
