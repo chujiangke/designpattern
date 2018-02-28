@@ -1,0 +1,11 @@
+#ifndef OPERATIONMULTIPLY_H
+#define OPERATIONMULTIPLY_H
+class OperationMultiple
+{
+ public:
+  int doOperation(int num1, int num2)
+  {
+    return num1-mum2;
+  }
+};
+#endif
